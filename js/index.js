@@ -14,26 +14,26 @@ const siteContent = {
     "img-src": "img/header-img.png"
   },
   "main-content": {
-    "features-h4":"Features",
+    "features-h4": "Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "about-h4":"About",
+    "about-h4": "About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
-    "services-h4":"Services",
+    "services-h4": "Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "product-h4":"Product",
+    "product-h4": "Product",
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "vision-h4":"Vision",
+    "vision-h4": "Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   "contact": {
-    "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
-    "phone" : "1 (888) 888-8888",
-    "email" : "sales@greatidea.io",
+    "contact-h4": "Contact",
+    "address": "123 Way 456 Street Somewhere, USA",
+    "phone": "1 (888) 888-8888",
+    "email": "sales@greatidea.io",
   },
   "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
+    "copyright": "Copyright Great Idea! 2018"
   },
 };
 
@@ -41,10 +41,11 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let nav1=document.querySelectorAll("nav a");
-nav1.forEach((item)=>{
+let nav1 = document.querySelectorAll("nav a");
+nav1.forEach((item) => {
   item.style.color = "green";
 })
+
 nav1[0].textContent = siteContent["nav"]["nav-item-1"];
 nav1[1].textContent = siteContent["nav"]["nav-item-2"];
 nav1[2].textContent = siteContent["nav"]["nav-item-3"];
@@ -52,19 +53,36 @@ nav1[3].textContent = siteContent["nav"]["nav-item-4"];
 nav1[4].textContent = siteContent["nav"]["nav-item-5"];
 nav1[5].textContent = siteContent["nav"]["nav-item-6"];
 
+const nav = document.querySelector("nav");
+
+const new1 = document.createElement("a");
+new1.style.color = "green";
+const new2 = document.createElement("a");
+new2.style.color = "green";
+
+new1.textContent = "Flyyy";
+new2.textContent = "Eaaat";
+
+nav.appendChild(new1);
+nav.prepend(new2);
+
 
 const firstheader = document.querySelector("h1");
- firstheader.textContent= siteContent["cta"]["h1"];
+firstheader.textContent = siteContent["cta"]["h1"];
 
- const button = document.querySelector("button");
- button.textContent = siteContent["cta"]["button"];
+firstheader.style.align = "center"
 
- let ctaimg = document.getElementById("cta-img");
- ctaimg.src = siteContent["cta"]["img-src"];
+const button = document.querySelector("button");
+button.textContent = siteContent["cta"]["button"];
 
- const column = document.getElementsByClassName(".cta-text");
-//  column.style.flex = "column";
- 
+let ctaimg = document.getElementById("cta-img");
+ctaimg.src = siteContent["cta"]["img-src"];
+
+const column = document.querySelector(".cta div");
+column.style.display = "flex";
+column.style.direction = "column";
+
+
 const h4 = document.querySelectorAll(".main-content h4");
 h4[0].textContent = siteContent["main-content"]["features-h4"]
 h4[1].textContent = siteContent["main-content"]["about-h4"]
@@ -92,6 +110,3 @@ pcontact[2].textContent = siteContent["contact"]["email"];
 
 const footer = document.querySelector("footer p");
 footer.textContent = siteContent["footer"]["copyright"];
-
-
-
