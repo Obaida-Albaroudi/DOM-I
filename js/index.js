@@ -41,14 +41,17 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-// let nav1=document.querySelectorAll("nav a");
+let nav1=document.querySelectorAll("nav a");
+nav1.forEach((item)=>{
+  item.style.color = "green";
+})
+nav1[0].textContent = siteContent["nav"]["nav-item-1"];
+nav1[1].textContent = siteContent["nav"]["nav-item-2"];
+nav1[2].textContent = siteContent["nav"]["nav-item-3"];
+nav1[3].textContent = siteContent["nav"]["nav-item-4"];
+nav1[4].textContent = siteContent["nav"]["nav-item-5"];
+nav1[5].textContent = siteContent["nav"]["nav-item-6"];
 
-// nav1[0].textContent = siteContent["nav"]["nav-item-1"];
-// nav1[1].textContent = siteContent["nav"]["nav-item-2"];
-// nav1[2].textContent = siteContent["nav"]["nav-item-3"];
-// nav1[3].textContent = siteContent["nav"]["nav-item-4"];
-// nav1[4].textContent = siteContent["nav"]["nav-item-5"];
-// nav1[5].textContent = siteContent["nav"]["nav-item-6"];
 
 const firstheader = document.querySelector("h1");
  firstheader.textContent= siteContent["cta"]["h1"];
@@ -58,18 +61,23 @@ const firstheader = document.querySelector("h1");
 
  let ctaimg = document.getElementById("cta-img");
  ctaimg.src = siteContent["cta"]["img-src"];
+
+ const column = document.getElementsByClassName(".cta-text");
+//  column.style.flex = "column";
  
 const h4 = document.querySelectorAll(".main-content h4");
 h4[0].textContent = siteContent["main-content"]["features-h4"]
 h4[1].textContent = siteContent["main-content"]["about-h4"]
 h4[2].textContent = siteContent["main-content"]["services-h4"]
-h4[3].textContent = siteContent["main-content"]["vision-h4"]
+h4[3].textContent = siteContent["main-content"]["product-h4"]
+h4[4].textContent = siteContent["main-content"]["vision-h4"]
 
 const p = document.querySelectorAll(".main-content p");
 p[0].textContent = siteContent["main-content"]["features-content"];
 p[1].textContent = siteContent["main-content"]["about-content"];
 p[2].textContent = siteContent["main-content"]["services-content"];
-p[3].textContent = siteContent["main-content"]["vision-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
 
 let midimg = document.getElementById("middle-img");
 midimg.src = siteContent["main-content"]["middle-img-src"];
