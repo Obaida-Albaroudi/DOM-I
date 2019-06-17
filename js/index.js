@@ -69,6 +69,7 @@ nav.prepend(new2);
 
 const firstheader = document.querySelector("h1");
 firstheader.textContent = siteContent["cta"]["h1"];
+firstheader.innerHTML = "DOM<br>Is<br>Awesome"
 
 firstheader.style.align = "center"
 
@@ -79,8 +80,6 @@ let ctaimg = document.getElementById("cta-img");
 ctaimg.src = siteContent["cta"]["img-src"];
 
 const column = document.querySelector(".cta div");
-column.style.display = "flex";
-column.style.direction = "column";
 
 
 const h4 = document.querySelectorAll(".main-content h4");
