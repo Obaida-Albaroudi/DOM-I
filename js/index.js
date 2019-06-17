@@ -14,29 +14,98 @@ const siteContent = {
     "img-src": "img/header-img.png"
   },
   "main-content": {
-    "features-h4":"Features",
+    "features-h4": "Features",
     "features-content": "Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "about-h4":"About",
+    "about-h4": "About",
     "about-content": "About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "middle-img-src": "img/mid-page-accent.jpg",
-    "services-h4":"Services",
+    "services-h4": "Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "product-h4":"Product",
+    "product-h4": "Product",
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
-    "vision-h4":"Vision",
+    "vision-h4": "Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
   "contact": {
-    "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
-    "phone" : "1 (888) 888-8888",
-    "email" : "sales@greatidea.io",
+    "contact-h4": "Contact",
+    "address": "123 Way 456 Street Somewhere, USA",
+    "phone": "1 (888) 888-8888",
+    "email": "sales@greatidea.io",
   },
   "footer": {
-    "copyright" : "Copyright Great Idea! 2018"
+    "copyright": "Copyright Great Idea! 2018"
   },
 };
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let nav1 = document.querySelectorAll("nav a");
+nav1.forEach((item) => {
+  item.style.color = "green";
+})
+
+nav1[0].textContent = siteContent["nav"]["nav-item-1"];
+nav1[1].textContent = siteContent["nav"]["nav-item-2"];
+nav1[2].textContent = siteContent["nav"]["nav-item-3"];
+nav1[3].textContent = siteContent["nav"]["nav-item-4"];
+nav1[4].textContent = siteContent["nav"]["nav-item-5"];
+nav1[5].textContent = siteContent["nav"]["nav-item-6"];
+
+const nav = document.querySelector("nav");
+
+const new1 = document.createElement("a");
+new1.style.color = "green";
+const new2 = document.createElement("a");
+new2.style.color = "green";
+
+new1.textContent = "Flyyy";
+new2.textContent = "Eaaat";
+
+nav.appendChild(new1);
+nav.prepend(new2);
+
+
+const firstheader = document.querySelector("h1");
+firstheader.textContent = siteContent["cta"]["h1"];
+firstheader.innerHTML = "DOM<br>Is<br>Awesome"
+
+firstheader.style.align = "center"
+
+const button = document.querySelector("button");
+button.textContent = siteContent["cta"]["button"];
+
+let ctaimg = document.getElementById("cta-img");
+ctaimg.src = siteContent["cta"]["img-src"];
+
+const column = document.querySelector(".cta div");
+
+
+const h4 = document.querySelectorAll(".main-content h4");
+h4[0].textContent = siteContent["main-content"]["features-h4"]
+h4[1].textContent = siteContent["main-content"]["about-h4"]
+h4[2].textContent = siteContent["main-content"]["services-h4"]
+h4[3].textContent = siteContent["main-content"]["product-h4"]
+h4[4].textContent = siteContent["main-content"]["vision-h4"]
+
+const p = document.querySelectorAll(".main-content p");
+p[0].textContent = siteContent["main-content"]["features-content"];
+p[1].textContent = siteContent["main-content"]["about-content"];
+p[2].textContent = siteContent["main-content"]["services-content"];
+p[3].textContent = siteContent["main-content"]["product-content"];
+p[4].textContent = siteContent["main-content"]["vision-content"];
+
+let midimg = document.getElementById("middle-img");
+midimg.src = siteContent["main-content"]["middle-img-src"];
+
+const h4contact = document.querySelector(".contact h4");
+h4contact.textContent = siteContent["contact"]["contact-h4"];
+
+const pcontact = document.querySelectorAll(".contact p");
+pcontact[0].textContent = siteContent["contact"]["address"];
+pcontact[1].textContent = siteContent["contact"]["phone"];
+pcontact[2].textContent = siteContent["contact"]["email"];
+
+const footer = document.querySelector("footer p");
+footer.textContent = siteContent["footer"]["copyright"];
